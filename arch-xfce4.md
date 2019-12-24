@@ -74,3 +74,30 @@ run `mkinitcpio -p linux`
 
 set root password with `passwd`
 
+At this point, I get into device-specific things and will address those as I go
+
+`pacman -S grub efibootmgr intel-ucode`
+
+For **Thinkpad Twist s230u**, edit `/etc/default/grub` and add `i8042.reset=1` to `GRUB_CMDLINE_LINUX_DEFAULT`.
+
+Install grub: `grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=ArchLinux`
+
+`grub-mkconfig -o /boot/grub/grub.cfg`
+
+At this point, the system is complete, and you could do `exit`, `umount -R /mnt`, and reboot. BUT, that's no fun.
+
+## Post Base-Install Stuff
+
+`pacman -S networkmanager wireless_tools wpa_supplicant`
+
+`systemctl enable NetworkManager.service`
+
+`useradd -m -g users -G wheel,audio,uucp -s /bin/bash username`
+
+`passwd username`
+
+`export EDITOR=/usr/bin/vim` so that `visudo` works the way I want it to.
+
+`pacman -S alsa-utils xorg-server mesa xf86-video-intel vulkan-intel pulseaudio pavucontrol xfce4 xfce4-goodies lightdm lightdm-gtk-greeter gnome-keyring`
+
+
