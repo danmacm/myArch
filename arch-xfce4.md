@@ -37,3 +37,21 @@ Select **New**, size is **300M**, Enter. Select **Type**, select **EFI System**,
 `mkfs.fat -F32 /dev/sdb1`
 
 `mkfs.ext4 /dev/sdb2`
+
+`mount /dev/sdb2 /mnt`
+
+`mkdir -p /mnt/boot/efi`
+
+`mount /dev/sdb1 /mnt/boot/efi`
+
+At this point I'll often look at `lsblk` just to make sure I got things right.
+
+`nano /etc/pacman.d/mirrorlist`, and go find a good mirror. Copy line with `Alt+6`, up-arrow or PgUp to the top, then `Ctrl+U` to paste. Quick exit (for me) is `Ctrl+X`, `Y`, and `Enter`.
+
+`pacstrap /mnt base base-devel linux linux-firmware vim git`
+
+* Base is required
+* linux is required
+* base-devel tells the system to download all build tools
+* linux-firmware pulls all device firmware
+* Vim and git are other tools that I go to right away.
