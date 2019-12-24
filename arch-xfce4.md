@@ -98,7 +98,7 @@ At this point, the system is complete, and you could do `exit`, `umount -R /mnt`
 
 `export EDITOR=/usr/bin/vim` so that `visudo` works the way I want it to.
 
-`pacman -S alsa-utils xorg-server mesa xf86-video-intel vulkan-intel pulseaudio pavucontrol xfce4 xfce4-goodies lightdm lightdm-gtk-greeter network-manager-applet gnome-keyring gnu-free-fonts noto-fonts ttf-bitstream-vera ttf-dejavu ttf-droid ttf-liberation cantarell-fonts chromium`
+`pacman -S alsa-utils xorg-server mesa xf86-video-intel vulkan-intel pulseaudio pavucontrol xfce4 xfce4-goodies lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings network-manager-applet gnome-keyring gnu-free-fonts noto-fonts ttf-bitstream-vera ttf-dejavu ttf-droid ttf-liberation cantarell-fonts ttf-roboto chromium`
 
 `systemctl enable lightdm`
 
