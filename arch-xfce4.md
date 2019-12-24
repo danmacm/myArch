@@ -120,3 +120,15 @@ cd pamac-tray-indicator
 
 makepkg -is
 
+I usually reboot here, then open Pamac and edit preferences. I set AUR support on and to keep packages.
+
+Now install Numix (gtk-theme and circle-icons and a cursor theme)
+
+### LEFT TO DO
+
+* grub theme, change timeout
+* arch wallpapers & artwork
+* plank
+* xfce4 panel changes
+* udisks2 and thunar integration
+* InSyncHQ and/or Dropbox and/or pCloud
