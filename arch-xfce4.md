@@ -100,4 +100,6 @@ At this point, the system is complete, and you could do `exit`, `umount -R /mnt`
 
 `pacman -S alsa-utils xorg-server mesa xf86-video-intel vulkan-intel pulseaudio pavucontrol xfce4 xfce4-goodies lightdm lightdm-gtk-greeter gnome-keyring`
 
+`systemctl enable lightdm`
 
+At this point, we can reboot and to the rest from GUI. `exit`, then `umount -R /mnt`, and then `reboot`. If on SSH, you'll obviously be disconnected.
