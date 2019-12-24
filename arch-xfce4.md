@@ -103,3 +103,20 @@ At this point, the system is complete, and you could do `exit`, `umount -R /mnt`
 `systemctl enable lightdm`
 
 At this point, we can reboot and to the rest from GUI. `exit`, then `umount -R /mnt`, and then `reboot`. If on SSH, you'll obviously be disconnected.
+
+## Time to tweak!
+
+At this point, things are some function, some aesthetic.
+
+`cd ~ && mkdir ~/src && cd ~/src && git clone https://aur.archlinux.org/pamac-aur.git`
+ 
+ cd pamac-aur
+ 
+ makepkg -is
+ 
+ `cd ~/src && git clone https://aur.archlinux.org/pamac-tray-appindicator.git`
+
+cd pamac-tray-indicator
+
+makepkg -is
+
