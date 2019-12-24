@@ -55,3 +55,22 @@ At this point I'll often look at `lsblk` just to make sure I got things right.
 * base-devel tells the system to download all build tools
 * linux-firmware pulls all device firmware
 * Vim and git are other tools that I go to right away.
+
+`genfstab -U /mnt` I check this before writing it with `genfstab -U /mnt >> /mnt/etc/fstab`
+
+`arch-chroot /mnt`
+
+Set timezone with `ln -sf /usr/share/zoneinfo/XXX/YYY /etc/localtime` replacing XXX and YYY with appropriate location information.
+
+`hwclock --systohc`
+
+Edit `/etc/locale.gen` for the correct locale, then run `locale-gen`, then create the locale.conf file with `echo LANG=en_US.UTF-8 >> /etc/locale.conf` (change to match your locale)
+
+create hostname in `/etc/hostname`
+
+edit `/etc/mkinitcpio.conf` to add `i915` as a module for intel gfx.
+
+run `mkinitcpio -p linux`
+
+set root password with `passwd`
+
