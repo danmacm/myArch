@@ -80,6 +80,8 @@ At this point, I get into device-specific things and will address those as I go
 
 For **Thinkpad Twist s230u**, edit `/etc/default/grub` and add `i8042.reset=1` to `GRUB_CMDLINE_LINUX_DEFAULT`.
 
+ * http://0116339.blogspot.com/2014/07/lenovo-thinkpad-twist-s230u-touchpad.html?m=1
+
 Install grub: `grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=ArchLinux`
 
 `grub-mkconfig -o /boot/grub/grub.cfg`
